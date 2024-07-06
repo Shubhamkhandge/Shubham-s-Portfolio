@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font-awesome only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Shubham's Portfolio</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script type="text/javascript">
+        (function () {
+            emailjs.init('AHxJquwAhMAmsAbyY');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                this.contact_number.value = Math.random() * 100000 | 0;
+                emailjs.sendForm('service_7oceuy2', 'template_1c08yjy', this)
+                    .then(function () {
+                        document.getElementById('message').innerHTML = "message sent ✅ "
+                        console.log('SUCCESS!');
+                    }, function (error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav-name">Shubham</a>
+
+            <div class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link fa fa-home"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link fa fa-user"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#skills" class="nav-link fa fa-cube"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#project" class="nav-link fa fa-briefcase"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link fa fa-phone"></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="home section" data-aos="fade-in" id="home">
+            <div class="home-container container grid">
+                <div class="home-data">
+                    <span class="home-greeting">Hello 👋, I'm</span>
+                    <h1 class="home-name">Shubham Khandge</h1>
+                    <h3 class="home-education">Full Stack Developer</h3>
+
+                    <div class="home-button">
+                        <a download="" href="assets/pdf/SHUBHAM_KHANDGE_JAVA.pdf" class="button button-blank">
+                            Download Resume
+                        </a>
+
+                        <a href="#about" class="button">About</a>
+                    </div>
+                </div>
+
+                <div class="home-handle">
+                    <img src="assets/img/pro1.jpeg" width="1804" height="2048" alt="Jatin-Chawla" class="home-img">
+                </div>
+
+                <div class="home-social">
+                    <a href="https://www.linkedin.com/in/shubham-khandge/" target="_blank" class="home-social-link">
+                        <i class='fa fa-linkedin'></i>
+                    </a>
+                    <a href="https://github.com/Shubhamkhandge" target="_blank" class="home-social-link">
+                        <i class='fa fa-github'></i>
+                    </a>
+                    <a href="https://www.instagram.com/_its_shubhzz_?igsh=ZGUzMzM3NWJiOQ==" target="_blank"
+                        class="home-social-link">
+                        <i class='fa fa-instagram'></i>
+                    </a>
+                </div>
+
+                <a href="#about" class="home-scroll">
+                    <i class='fa fa-arrow-circle-down home-scroll-icon'></i>
+                    <span class="home-scroll-name">Scroll Down</span>
+                </a>
+            </div>
+        </section>
+        <section class="about section" data-aos="fade-in" id="about">
+            <span class="section-subtitle">My Intro</span>
+            <h2 class="section-title">About Me</h2>
+
+            <div class="about-container container grid">
+                <img src="assets/img/profile.jpg" alt="" class="about-img">
+
+                <div class="about-data">
+                    <div class="about-info">
+                        <div class="about-box">
+                            <i class='fa fa-hourglass about-icon'></i>
+                            <h3 class="about-title">Experience</h3>
+                            <span class="about-subtitle">2 Years +</span>
+                        </div>
+                        <div class="about-box">
+                            <i class='fa fa-check about-icon'></i>
+                            <h3 class="about-title">Completed</h3>
+                            <span class="about-subtitle">10+ Projects</span>
+                        </div>
+                        <div class="about-box">
+                            <i class='fa fa-headphones about-icon'></i>
+                            <h3 class="about-title">Support</h3>
+                            <span class="about-subtitle">Online 24/7</span>
+                        </div>
+                    </div>
+
+                    <p class="about-description">
+                        As a Fullstack MERN Developer with over more than 2 years of experience, I have expanded my
+                        skill set enhancing my proficiency in building and maintaining efficient and performant web
+                        applications. My expertise extends to not only front-end technologies such as HTML, CSS,
+                        JavaScript, and React.js but also encompasses these advanced frameworks (GatsbyJs,NextJs).
+                    </p>
+                    <p class="about-description">
+                        I possess a deep understanding of RESTful API design principles, and my experience includes
+                        successfully solving complex bugs in production environments. I've effectively managed more than
+                        three websites, showcasing my ability to handle multiple projects concurrently. I take pride in
+                        being a multitasker, allowing me to seamlessly switch from one project to another, ensuring
+                        consistent and high-quality outcomes.
+                    </p>
+
+                    <a href="#contact" class="button about-button-contact">Contact Me</a>
+                </div>
+            </div>
+        </section>
+        <section class="skills section" data-aos="fade-in" id="skills">
+            <span class="section-subtitle">My Abilities</span>
+            <h2 class="section-title">My Experience</h2>
+
+            <div class="skills-container container grid">
+                <div class="skills-content">
+                    <h3 class="skills-title">Frontend Development</h3>
+
+                    <div class="skills-box">
+                        <div class="skills-group">
+                            <div class="skills-data">
+                                <i class='fa fa-check-circle'></i>
+
+                                <div>
+                                    <h3 class="skills-name">ReactJs</h3>
+                                    <span class="skills-level">Advanced</span>
+                                </div>
+                            </div>
+
+                            <div class="skills-data">
+                                <i class='fa fa-check-circle'></i>
+
+                                <div>
+                                    <h3 class="skills-name">Angular</h3>
+                                    <span class="skills-level">Advanced</span>
+                                </div>
+                            </div>
+
+                            <div class="skills-data">
+                                <i class='fa fa-check-circle'></i>
+
+                                <div>
+                                    <h3 class="skills-name">HTML & CSS</h3>
+                                    <span class="skills-level">Advanced</span>
+                                </div>
+                            </div>
+
+                            <!-- <div class="skills-data">
+                                <i class='fa fa-check-circle'></i>
+
+                                <div>
+                                    <h3 class="skills-name">Spring & Spring Boot</h3>
+                                    <span class="skills-level">Intermediate</span>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="skills-group">
+                            <div class="skills-data">
+                                <i class='fa fa-check-circle'></i>
+
+                                <div>
+                                    <h3 class="skills-name">RESTAPI</h3>
+                                    <span class="skills-level">Intermediate</span>
+                                </div>
+                            </div>
+
+                            <!-- <div class="skills-data">
+                                <i class='fa fa-check-circle'></i>
+
+                                <div>
+                                    <h3 class="skills-name">JavaScript</h3>
+                                    <span class="skills-level">Intermediate</span>
+                                </div>
+                            </div> -->
+
+                            <div class="skills-data">
+                                <i class='fa fa-check-circle'></i>
+
+                                <div>
+                                    <h3 class="skills-name">Bootstrap CSS</h3>
+                                    <span class="skills-level">Advanced</span>
+                                </div>
+                            </div>
+
+                            <div class="skills-data">
+                                <i class='fa fa-check-circle'></i>
+
+                                <div>
+                                    <h3 class="skills-name">Tailwind CSS</h3>
+                                    <span class="skills-level">Intermediate</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-content">
+                    <h3 class="skills-title">Backend Development</h3>
+
+                    <div class="skills-box">
+                        <div class="skills-group">
+                            <div class="skills-data">
+                                <i class='fa fa-check-circle'></i>
+
+                                <div>
+                                    <h3 class="skills-name">Java</h3>
+                                    <span class="skills-level">Intermediate</span>
+                                </div>
+                            </div>
+
+                            <div class="skills-data">
+                                <i class='fa fa-check-circle'></i>
+
+                                <div>
+                                    <h3 class="skills-name">Oracle DB</h3>
+                                    <span class="skills-level">Intermediate</span>
+                                </div>
+                            </div>
+
+                            <div class="skills-data">
+                                <i class='fa fa-check-circle'></i>
+
+                                <div>
+                                    <h3 class="skills-name">MySQL</h3>
+                                    <span class="skills-level">Advanced</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="skills-group">
+                            <div class="skills-data">
+                                <i class='fa fa-check-circle'></i>
+
+                                <div>
+                                    <h3 class="skills-name">Mongo DB</h3>
+                                    <span class="skills-level">Advanced</span>
+                                </div>
+                            </div>
+
+                            <div class="skills-data">
+                                <i class='fa fa-check-circle'></i>
+
+                                <div>
+                                    <h3 class="skills-name">Oracle DB</h3>
+                                    <span class="skills-level">Intermediate</span>
+                                </div>
+                            </div>
+
+                            <div class="skills-data">
+                                <i class='fa fa-check-circle'></i>
+
+                                <div>
+                                    <h3 class="skills-name">Python</h3>
+                                    <span class="skills-level">Intermediate</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="skills-content">
+                    <h3 class="skills-title">Tools</h3>
+
+                    <div class="skills-box">
+                        <div class="skills-group">
+                            <div class="skills-data">
+                                <i class='fa fa-check-circle'></i>
+
+                                <div>
+                                    <h3 class="skills-name">Git & GitHub</h3>
+                                    <span class="skills-level">Advanced</span>
+                                </div>
+                            </div>
+
+                            <div class="skills-data">
+                                <i class='fa fa-check-circle'></i>
+
+                                <div>
+                                    <h3 class="skills-name">VS Code</h3>
+                                    <span class="skills-level">Advanced</span>
+                                </div>
+                            </div>
+
+                            <div class="skills-data">
+                                <i class='fa fa-check-circle'></i>
+
+                                <div>
+                                    <h3 class="skills-name">Eclipse IDE</h3>
+                                    <span class="skills-level">Advanced</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+
+
+        <section class="project section" data-aos="fade-in" id="project">
+            <span class="section-subtitle">My Portfolio</span>
+            <h2 class="section-title">Recent Projects</h2>
+
+            <div class="project-container container grid">
+                <div class="project-card mix web">
+                    <img src="assets/img/blockchain.webp" alt="" class="project-img">
+
+                    <h3 class="project-title">Land Registration Blockchain</h3>
+
+                    <a href="#" class="project-button">
+                        github <i class='fa fa-arrow-circle-o-right project-icon'></i>
+                    </a>
+                </div>
+
+                <div class="project-card mix movil">
+                    <img src="assets/img/packersmovers.jpg" alt="" class="project-img">
+
+                    <h3 class="project-title">Packers & Movers</h3>
+
+                    <!-- <a href="https://github.com/thejatinchawla/Packers-And-Movers-MERN" target="_blank"
+                        class="project-button">
+                        github <i class='fa fa-arrow-circle-o-right project-icon'></i>
+                    </a> -->
+                </div>
+
+                <div class="project-card mix design">
+                    <img src="assets/img/nodejs.jpg" alt="" class="project-img">
+
+                    <h3 class="project-title">Nodejs auth</h3>
+
+                    <!-- <a href="https://github.com/thejatinchawla/Nodejs-backend_Auth" target="_blank"
+                        class="project-button">
+                        github <i class='fa fa-arrow-circle-o-right project-icon'></i>
+                    </a> -->
+                </div>
+
+                <div class="project-card mix web">
+                    <img src="assets/img/textutilslogo.png" alt="" class="project-img">
+
+                    <h3 class="project-title">Text utils</h3>
+
+                    <a href="https://dreamy-daffodil-9fe7b9.netlify.app/" target="_blank" class="project-button">
+                        Demo <i class='fa fa-arrow-circle-o-right project-icon'></i>
+                    </a>
+                </div>
+
+                <div class="project-card mix web">
+                    <img src="assets/img/blockchain.jpg" alt="" class="project-img">
+
+                    <h3 class="project-title">FundMe-Ethereum-Dapp</h3>
+
+                    <!-- <a href="https://github.com/thejatinchawla/FundMe-Ethereum-Dapp" target="_blank"
+                        class="project-button">
+                        github <i class='fa fa-arrow-circle-o-right project-icon'></i>
+                    </a> -->
+                </div>
+
+            </div>
+        </section>
+        <section class="contact section" id="contact">
+            <sapn class="section-subtitle">Get in touch</sapn>
+            <h3 class="section-title">Contact Me</h3>
+
+            <div class="contact-container container grid" data-aos="fade-in">
+                <div class="contact-content">
+                    <h3 class="contact-title contact-title-info">Talk to me</h3>
+
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <i class='fa fa-envelope contact-card-icon'></i>
+                            <h3 class="contact-card-title bold-title">Email</h3>
+                            <span class="contact-card-data">khandgeshubham404@gmail.com</span>
+
+                            <a href="mailto:example@domain.com" target="_blank" class="contact-button">
+                                Write Me <i class='fa fa-arrow-circle-o-right contact-button-icon'></i>
+                            </a>
+                        </div>
+
+                        <div class="contact-card">
+                            <i class='fa fa-linkedin contact-card-icon'></i>
+                            <h3 class="contact-card-title">linkedin</h3>
+                            <span class="contact-card-data">Shubham Khandge</span>
+
+                            <a href="https://www.linkedin.com/in/shubham-khandge/" target="_blank"
+                                class="contact-button">
+                                Write Me <i class='fa fa-arrow-circle-o-right contact-button-icon'></i>
+                            </a>
+                        </div>
+
+                        <!-- <div class="contact-card">
+                            <i class='fa fa-twitter contact-card-icon'></i>
+                            <h3 class="contact-card-title">Twitter</h3>
+                            <span class="contact-card-data">thejatinkhatri</span>
+
+                            <a href="https://twitter.com/thejatinkhatri" target="_blank" class="contact-button">
+                                Write Me <i class='fa fa-arrow-circle-o-right contact-button-icon'></i>
+                            </a>
+                        </div> -->
+
+                        <div class="contact-card">
+                            <i class='fa fa-github contact-card-icon'></i>
+                            <h3 class="contact-card-title">GitHub</h3>
+                            <span class="contact-card-data">ShubhamKhandge</span>
+
+                            <a href="https://github.com/Shubhamkhandge" target="_blank" class="contact-button">
+                                Write Me <i class='fa fa-arrow-circle-o-right contact-button-icon'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-content" data-aos="fade-in">
+                    <h3 class="contact-title contact-title-form">Q & A</h3>
+                    <span class="section-subtitle">Ask your questions</span>
+
+                    <form id="contact-form" class="contact-form">
+                        <div class="contact-form-div">
+                            <label for="" class="contact-form-tag">Name</label>
+                            <input type="hidden" name="contact_number">
+                            <input required type="text" name="name" placeholder="Enter name" class="contact-form-input">
+                        </div>
+
+                        <div class="contact-form-div">
+                            <label for="" class="contact-form-tag">Mail</label>
+                            <input required type="text" name="email" placeholder="Enter email"
+                                class="contact-form-input">
+                        </div>
+
+                        <div class="contact-form-div contact-form-area">
+                            <label for="" class="contact-form-tag">Message</label>
+                            <textarea required name="message" placeholder="Write your Message"
+                                class="contact-form-input "></textarea>
+                        </div>
+
+                        <button type="submit" class="button">
+                            Send Message
+                        </button>
+                        <p class="contact-form-message" id="message"></p>
+                    </form>
+
+                </div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container container" data-aos="fade-in">
+            <h1 class="footer-title">Shubham Khandge</h1>
+
+            <ul class="footer-list">
+
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Home</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#about" class="footer-link">About</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#skills" class="footer-link">Skills</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#project" class="footer-link">Projects</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#contact" class="footer-link">Contact</a>
+                </li>
+            </ul>
+
+            <ul class="footer-social">
+                <li class="footer-social-item">
+                    <a href="https://www.instagram.com/_its_shubhzz_?igsh=ZGUzMzM3NWJiOQ==" target="_blank"
+                        class="footer-social-link">
+                        <i class='fa fa-instagram footer-social-icon'></i>
+                    </a>
+                </li>
+                <!-- <li class="footer-social-item">
+                    <a href="https://twitter.com/thejatinkhatri" target="_blank" class="footer-social-link">
+                        <i class='fa fa-twitter footer-social-icon'></i>
+                    </a>
+                </li> -->
+                <li class="footer-social-item">
+                    <a href="https://www.linkedin.com/in/shubham-khandge/" target="_blank" class="footer-social-link">
+                        <i class='fa fa-linkedin footer-social-icon'></i>
+                    </a>
+                </li>
+                <li class="footer-social-item">
+                    <a href="https://github.com/Shubhamkhandge" target="_blank" class="footer-social-link">
+                        <i class='fa fa-github footer-social-icon'></i>
+                    </a>
+                </li>
+            </ul>
+
+            <span class="footer-copy">
+                &#169; 2024 All rights reserved by <span class="footer-author">Shubham Khandge</span>.
+            </span>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 300,
+            duration: 1000
+        });
+    </script>
+</body>
+
+</html>
